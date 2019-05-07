@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@app": [ "src/ts/app.tsx" ],
+      "@components/*": [ "src/ts/components/*" ],
+      "@i18n/*": [ "src/ts/i18n/*" ],
+      "@modules/*": [ "src/ts/modules/*" ],
+      "@store/*": [ "src/ts/store/*" ],
+      "@slices/*": [ "src/ts/slices/*" ],
+      "@utils/*": [ "src/ts/utils/*" ],
+      "@assets/*": [ "src/assets/*" ],
+      "@fakes/*": [ "test/fakes/*" ]
+    }
+  }
+}
