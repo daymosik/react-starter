@@ -1,12 +1,16 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const rules = [
   {
-    test: /\.tsx?$/,
     enforce: 'pre',
     loader: 'tslint-loader',
+    test: /\.tsx?$/,
   },
-  { test: /\.tsx?$/, loader: 'ts-loader' },
+  {
+    exclude: /node_modules/,
+    loaders: ['babel-loader', 'ts-loader'],
+    test: /\.tsx?$/,
+  },
   {
     test: /\.(sc|c)ss/,
     use: [
@@ -14,16 +18,17 @@ const rules = [
       'css-loader',
       'postcss-loader',
       'sass-loader',
-    ]
+    ],
   },
-  { test: /\.(png|jpg)$/,
+  {
+    test: /\.(png|jpg)$/,
     use: [{
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: 'static/bookify/build/'
+        outputPath: 'static/bookify/build/',
       },
-    }]
+    }],
   },
   { test: /\.(woff|woff2|eot|svg|ttf)$/, loader: 'file-loader' },
 ]

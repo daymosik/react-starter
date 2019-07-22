@@ -1,3 +1,6 @@
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
 import '@assets/styles/app.scss'
 import CustomRoute from '@components/custom-route'
 import HomeView from '@modules/home'
