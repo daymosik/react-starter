@@ -16,7 +16,7 @@
     "test:watch": "jest --watchAll --colors"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "i18next": "^19.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
